@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    {% for word_item in words %} 
+        <tr>
+        <td>word_item['word']</td>
+        <td>word_item['definition']<td>
+        </tr>
+    {% endfor %}
+{% endblock %}
