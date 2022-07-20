@@ -27,6 +27,17 @@ def create_app(test_config=None):
     # a simple page that says hello
     @app.route('/')
     def main_page():
-        return render_template('index.html')
+        words = [{
+                'word' : 'soz1',
+                'definition' : 'def1'
+            },{
+                'word' : 'soz1',
+                'definition' : 'def1'
+            },{
+                'word' : 'soz1',
+                'definition' : 'def1'
+            }]
+        
+        return render_template('index.html', words=words)
 
     return app
