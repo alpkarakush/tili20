@@ -2,11 +2,9 @@
 
 {% block content %}
     {% for word_item in data %} 
-        print(str(data), flush=True)
-        
         <tr>
-        <td>{{word_item['word']}}</td>
-        <td>{{word_item['definition']}}<td>
+        <td>{{word_item[0]}}</td>
+        <td>{{word_item[1]}}<td>
         </tr>
     {% endfor %}
 {% endblock %}

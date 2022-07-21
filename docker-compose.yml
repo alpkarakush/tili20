@@ -1,20 +1,43 @@
 version: "3"
 services:
-  app:
-    build: ./app
-    links:
-      - db
-    ports:
-      - "5000:5000"
-    environment:
-      FLASK_APP: 'web'
-      FLASK_ENV: 'development'
-
   db:
-    image: mysql:8.0.21
+    restart: 'always'
+    image: mysql:5.7
+    container_name: db
+    command: mysqld --default-authentication-plugin=mysql_native_password
     ports:
-      - "30000:3306"
+      - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
-    # volumes:
-    #   - ./db:/docker-entrypoint-initdb.d/:ro
+      MYSQL_USER: tili_admin
+      MYSQL_PASSWORD: tiliadmin123!
+      MYSQL_DB: tili
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    expose:
+    - "3306"
+    networks:
+      - webnet
+  
+  web:
+    restart: always
+    build: ./web
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: tili_admin
+      MYSQL_PASSWORD: tiliadmin123!
+      MYSQL_DB: tili
+      DB_HOST: 'db'
+      DB_PORT: '3306'
+      FLASK_APP: '/app/app.py'
+    networks:
+      - webnet
+    volumes:
+      - ./web/:/app/
+    ports:
+      - 5000:5000
+    depends_on:
+      - db
+    
+networks:
+  webnet:
