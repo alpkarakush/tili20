@@ -1,10 +1,12 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    {% for word_item in words %} 
+    {% for word_item in data %} 
+        print(str(data), flush=True)
+        
         <tr>
-        <td>word_item['word']</td>
-        <td>word_item['definition']<td>
+        <td>{{word_item['word']}}</td>
+        <td>{{word_item['definition']}}<td>
         </tr>
     {% endfor %}
 {% endblock %}
