@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for word in words %} 
+        <div class="card">
+            <h5 href="#" class="card-header">{{ word['word'] }}</h5>
+            <div class="card-body">
+            <h5 class="card-title">Author: {{ word['author'] }}</h5>
+            <p class="card-text">{{ word['definition'] }}</p>
+            </div>
+        </div>
+
+
+        <div class="word word--word_of_day">
+            <p class="word__date">20. 8. - slovo dne</p>
+            
+            <h2 class="word__title">
+                        <a href="https://cestina20.cz/slovnik/fotozrout/">fotožrout</a>
+            </h2>
+            
+            <div class="word__share">
+                <div class="word__share__content">
+                    <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fcestina20.cz%2Fslovnik%2Ffotozrout%2F" class="social social--fb" target="_blank" onclick="return !window.open(this.href, '_blank', 'width=600,height=400');"><span class="vhide">Sdílet na Facebooku</span></a>
+                    <a href="https://www.twitter.com/share?url=https%3A%2F%2Fcestina20.cz%2Fslovnik%2Ffotozrout%2F&amp;via=cestina20" class="social social--tw" target="_blank" onclick="return !window.open(this.href, '_blank', 'width=600,height=400');"><span class="vhide">Sdílet na Twitteru</span></a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fcestina20.cz%2Fslovnik%2Ffotozrout%2F&amp;title=foto%C5%BErout&amp;source=%C4%8Ce%C5%A1tina+2.0" class="social social--li" target="_blank" onclick="return !window.open(this.href, '_blank', 'width=600,height=400');"><span class="vhide">Sdílet na LinkedInu</span></a>
+                    <a href="https://plus.google.com/share?url=https%3A%2F%2Fcestina20.cz%2Fslovnik%2Ffotozrout%2F" class="social social--gp" target="_blank" onclick="return !window.open(this.href, '_blank', 'width=600,height=400');"><span class="vhide">Sdílet na Google+</span></a>
+                </div>
+            </div>
+            
+            <p>člověk, který si fotí jídlo, než ho sní</p>
+            <p><em>Příklad: „Z jeho instáče je zřejmé, že je to obsesivní fotožrout.”</em></p>
+            
+            <div class="word__rating__wrap" data-id="178674">
+                <div class="word__rating word__rating--up">16</div>
+                <div class="word__rating word__rating--down">1</div>
+            </div>
+
+            <p class="word__author">Автор <strong>{{ word['author'] }}</strong></p>
+        </div>
+    {% endfor %}
+{% endblock %}

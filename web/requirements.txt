@@ -3,3 +3,7 @@ flask_mysqldb
 mysql
 mysqlclient
 mysql-connector-python
+Flask-SQLAlchemy
+flask-wtf
+flask_migrate
+

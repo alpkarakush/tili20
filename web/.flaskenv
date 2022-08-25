@@ -1,0 +1,7 @@
+FLASK_APP="tili.py"
+MYSQL_ROOT_PASSWORD="root"
+MYSQL_USER="tili_admin"
+MYSQL_PASSWORD="tiliadmin123!"
+MYSQL_DB="tili"
+DB_HOST="db"
+DB_PORT="3306"

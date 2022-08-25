@@ -1,0 +1,26 @@
+
+
+u1 = User(username="username1", email="email_1")
+u2 = User(username="username2", email="email_2")
+
+db.session.add(u1)
+db.session.add(u2)
+
+
+w1 = Word(word_text="Big", author_id=1)
+w2 = Word(word_text="Small", author_id=2)
+
+db.session.add(w1)
+db.session.add(w2)
+
+d1 = Definition(definition_text="Large (syn.)", author_id=1, word_id=1)
+d2 = Definition(definition_text="Attribute of object (Large)", author_id=2, word_id=1)
+d3 = Definition(definition_text="Attribute of object (Small)", author_id=1, word_id=2)
+
+db.session.add(d1)
+db.session.add(d2)
+db.session.add(d3)
+
+
+
+

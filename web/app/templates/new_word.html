@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Create new word</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.word_text.label }}<br>
+            {{ form.word_text(size=32) }}
+            {% for error in form.word_text.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.definition_text.label }}<br>
+            {{ form.definition_text(cols=32, rows=4, size=500) }}
+            {% for error in form.definition_text.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.example_text.label }}<br>
+            {{ form.example_text(cols=32, rows=2, size=300) }}
+        </p>
+        <p>
+            {{ form.nickname.label }}<br>
+            {{ form.nickname(size=300) }}
+            {% for error in form.nickname.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.email.label }}<br>
+            {{ form.email(size=300) }}
+            {% for error in form.email.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}
