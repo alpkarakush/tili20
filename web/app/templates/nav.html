@@ -1,8 +1,45 @@
-<div class="container">
-    <header class="d-flex justify-content-center py-3">
-        <ul class="nav nav-pills">
-          <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link active" aria-current="page">Home</a></li>
-          <li class="nav-item"><a href="{{ url_for('new_word') }}" class="nav-link">Create a new word</a></li>
-        </ul>
-      </header>
-</div>
+{% from "macros.html" import nav_links with context %}
+
+<header class="header">
+  <div class="container">
+      <a class="header__go_to_content" href="#content"
+      title="Přejít na obsah">Přejít na obsah</a>
+      <a href="{{ url_for('new_word') }}"
+      class="header__add__mobile"><span>Přidat slovo</span></a>
+      <a class="header__logo" href="{{ url_for('index') }}">
+          <img src="{{ url_for('static', filename='/tili_logo_white_2-cropped.svg') }}" width=110 alt="Logo">		</a>
+      <div class="header__claim">Сиз жазган сөздүк</div>
+      <form role="search" method="get" class="header__search header__search--desktop"
+          action="">
+          <label for="header__search--desktop--s">Сөз издөө...</label>
+          <input type="text" value="" name="s" id="header__search--desktop--s"
+              placeholder="Сөз издөө..." autocomplete="off">
+          <button class="header__search__button">&nbsp;<span
+                      class="header__search__button__label">Hledat</span><span
+                      class="header__search__button__icon"></span></button>
+              <div class="header__search__result">
+      
+  <div class="spinner">
+      <div class="spinner__rect spinner__rect--1"></div>
+      <div class="spinner__rect spinner__rect--2"></div>
+      <div class="spinner__rect spinner__rect--3"></div>
+      <div class="spinner__rect spinner__rect--4"></div>
+      <div class="spinner__rect spinner__rect--5"></div>
+  </div>
+          <ul class="header__search__result__data">
+
+      </ul>
+  </div>
+          </form>
+      <span id="header__menu__button"
+          class="header__menu__button"><span>Menu</span></span>
+      <a href="{{ url_for('new_word')}}"
+      class="header__add button button--add">Жаңы сөз кош<span>&nbsp;</span></a>
+
+  </div>
+</header>
+
+
+{{ nav_links(request.endpoint.strip()) }}
+
+

@@ -30,6 +30,7 @@ services:
       DB_HOST: 'db'
       DB_PORT: '3306'
       FLASK_APP: '/app/app.py'
+      FLASK_DEBUG: '1'
     networks:
       - webnet
     volumes:

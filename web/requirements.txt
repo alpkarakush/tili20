@@ -6,4 +6,6 @@ mysql-connector-python
 Flask-SQLAlchemy
 flask-wtf
 flask_migrate
-
+flask_moment
+email_validator
+flask-cors

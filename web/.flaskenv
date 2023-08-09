@@ -5,3 +5,4 @@ MYSQL_PASSWORD="tiliadmin123!"
 MYSQL_DB="tili"
 DB_HOST="db"
 DB_PORT="3306"
+FLASK_DEBUG=1

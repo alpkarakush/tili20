@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:ooo="http://xml.openoffice.org/svg/export"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.2"
+   preserveAspectRatio="xMidYMid"
+   xml:space="preserve"
+   viewBox="-0.01 -0.72 6996.0001 4435.0001"
+   id="svg99"
+   sodipodi:docname="tili_logo_white_2-cropped.svg"
+   width="6996"
+   height="4435"
+   style="fill-rule:evenodd;stroke-width:28.22200012;stroke-linejoin:round"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"><metadata
+   id="metadata103"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1866"
+   inkscape:window-height="1016"
+   id="namedview101"
+   showgrid="false"
+   inkscape:pagecheckerboard="true"
+   fit-margin-left="10"
+   scale-x="1.2"
+   fit-margin-top="0"
+   fit-margin-right="0"
+   fit-margin-bottom="0"
+   inkscape:zoom="0.0449493"
+   inkscape:cx="188.01015"
+   inkscape:cy="3467.7983"
+   inkscape:window-x="54"
+   inkscape:window-y="27"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg99" />
+ <defs
+   class="ClipPathGroup"
+   id="defs8">
+  <clipPath
+   id="presentation_clip_path"
+   clipPathUnits="userSpaceOnUse">
+   <rect
+   x="0"
+   y="0"
+   width="14800"
+   height="10500"
+   id="rect2" />
+  </clipPath>
+  <clipPath
+   id="presentation_clip_path_shrink"
+   clipPathUnits="userSpaceOnUse">
+   <rect
+   x="14"
+   y="10"
+   width="14771"
+   height="10479"
+   id="rect5" />
+  </clipPath>
+ </defs>
+ <defs
+   id="defs21">
+  <font
+   id="EmbeddedFont_1"
+   horiz-adv-x="2048"
+   horiz-origin-x="0"
+   horiz-origin-y="0"
+   vert-origin-x="45"
+   vert-origin-y="90"
+   vert-adv-y="90">
+   <font-face
+   font-family="Likhan embedded"
+   units-per-em="2048"
+   font-weight="normal"
+   font-style="normal"
+   ascent="2117"
+   descent="609"
+   id="font-face10" />
+   <missing-glyph
+   horiz-adv-x="2048"
+   d="M 0,0 L 2047,0 2047,2047 0,2047 0,0 Z"
+   id="missing-glyph12" />
+   <glyph
+   unicode="l"
+   horiz-adv-x="504"
+   d="M 39,1276 L 39,1309 C 168,1340 277,1370 365,1399 L 373,1395 373,172 C 373,117 382,80 400,63 418,46 460,35 526,31 L 526,0 43,0 43,31 C 111,36 155,50 175,71 192,90 201,126 201,178 L 201,1155 C 201,1216 189,1254 166,1269 154,1276 137,1280 115,1280 103,1280 82,1279 51,1276 L 39,1276 Z"
+   id="glyph14" />
+   <glyph
+   unicode="i"
+   horiz-adv-x="478"
+   d="M 358,942 L 367,936 367,209 C 367,140 374,95 387,74 401,53 432,40 480,35 491,34 503,32 518,31 L 518,0 33,0 33,31 C 99,35 142,45 161,62 182,79 193,117 194,174 195,184 195,196 195,209 L 195,684 C 195,751 182,790 156,802 L 135,807 127,807 C 105,807 82,805 57,801 L 41,799 41,829 358,942 Z M 262,1399 C 301,1399 331,1383 352,1351 363,1334 369,1315 369,1294 369,1255 352,1226 319,1206 L 295,1195 C 284,1192 273,1190 262,1190 225,1190 197,1206 176,1237 165,1254 160,1273 160,1294 160,1332 176,1361 207,1382 224,1393 243,1399 262,1399 Z"
+   id="glyph16" />
+   <glyph
+   unicode="T"
+   horiz-adv-x="1165"
+   d="M 520,1270 L 410,1270 C 309,1270 238,1259 199,1236 176,1223 156,1203 141,1178 120,1145 101,1088 84,1008 L 35,1008 47,1356 1202,1356 1214,1008 1165,1008 C 1145,1105 1121,1170 1093,1203 L 1072,1223 C 1038,1251 979,1266 894,1269 L 840,1270 729,1270 729,222 C 729,153 739,107 758,84 778,61 821,46 887,40 898,40 911,40 926,40 L 926,0 328,0 328,39 C 404,44 453,54 476,71 501,88 515,124 518,179 519,196 520,219 520,246 L 520,1270 Z"
+   id="glyph18" />
+  </font>
+ </defs>
+ <defs
+   class="TextShapeIndex"
+   id="defs25">
+  <g
+   ooo:slide="id1"
+   ooo:id-list="id3 id4"
+   id="g23" />
+ </defs>
+ <defs
+   class="EmbeddedBulletChars"
+   id="defs57">
+  <g
+   id="bullet-char-template-57356"
+   transform="matrix(4.8828125e-4,0,0,-4.8828125e-4,0,0)">
+   <path
+   d="M 580,1141 1163,571 580,0 -4,571 Z"
+   id="path27"
+   inkscape:connector-curvature="0" />
+  </g>
+  <g
+   id="bullet-char-template-57354"
+   transform="matrix(4.8828125e-4,0,0,-4.8828125e-4,0,0)">
+   <path
+   d="M 8,1128 H 1137 V 0 H 8 Z"
+   id="path30"
+   inkscape:connector-curvature="0" />
+  </g>
+  <g
+   id="bullet-char-template-10146"
+   transform="matrix(4.8828125e-4,0,0,-4.8828125e-4,0,0)">
+   <path
+   d="M 174,0 602,739 174,1481 1456,739 Z M 1358,739 309,1346 659,739 Z"
+   id="path33"
+   inkscape:connector-curvature="0" />
+  </g>
+  <g
+   id="bullet-char-template-10132"
+   transform="matrix(4.8828125e-4,0,0,-4.8828125e-4,0,0)">
+   <path
+   d="M 2015,739 1276,0 H 717 l 543,543 H 174 v 393 h 1086 l -543,545 h 557 z"
+   id="path36"
+   inkscape:connector-curvature="0" />
+  </g>
+  <g
+   id="bullet-char-template-10007"
+   transform="matrix(4.8828125e-4,0,0,-4.8828125e-4,0,0)">
+   <path
+   d="m 0,-2 c -7,16 -16,29 -25,39 l 381,530 c -94,256 -141,385 -141,387 0,25 13,38 40,38 9,0 21,-2 34,-5 21,4 42,12 65,25 l 27,-13 111,-251 280,301 64,-25 24,25 c 21,-10 41,-24 62,-43 C 886,937 835,863 770,784 769,783 710,716 594,584 L 774,223 c 0,-27 -21,-55 -63,-84 l 16,-20 C 717,90 699,76 672,76 641,76 570,178 457,381 L 164,-76 c -22,-34 -53,-51 -92,-51 -42,0 -63,17 -64,51 -7,9 -10,24 -10,44 0,9 1,19 2,30 z"
+   id="path39"
+   inkscape:connector-curvature="0" />
+  </g>
+  <g
+   id="bullet-char-template-10004"
+   transform="matrix(4.8828125e-4,0,0,-4.8828125e-4,0,0)">
+   <path
+   d="M 285,-33 C 182,-33 111,30 74,156 52,228 41,333 41,471 c 0,78 14,145 41,201 34,71 87,106 158,106 53,0 88,-31 106,-94 l 23,-176 c 8,-64 28,-97 59,-98 l 735,706 c 11,11 33,17 66,17 42,0 63,-15 63,-46 V 965 c 0,-36 -10,-64 -30,-84 L 442,47 C 390,-6 338,-33 285,-33 Z"
+   id="path42"
+   inkscape:connector-curvature="0" />
+  </g>
+  <g
+   id="bullet-char-template-9679"
+   transform="matrix(4.8828125e-4,0,0,-4.8828125e-4,0,0)">
+   <path
+   d="M 813,0 C 632,0 489,54 383,161 276,268 223,411 223,592 c 0,181 53,324 160,431 106,107 249,161 430,161 179,0 323,-54 432,-161 108,-107 162,-251 162,-431 0,-180 -54,-324 -162,-431 C 1136,54 992,0 813,0 Z"
+   id="path45"
+   inkscape:connector-curvature="0" />
+  </g>
+  <g
+   id="bullet-char-template-8226"
+   transform="matrix(4.8828125e-4,0,0,-4.8828125e-4,0,0)">
+   <path
+   d="m 346,457 c -73,0 -137,26 -191,78 -54,51 -81,114 -81,188 0,73 27,136 81,188 54,52 118,78 191,78 73,0 134,-26 185,-79 51,-51 77,-114 77,-187 0,-75 -25,-137 -76,-188 -50,-52 -112,-78 -186,-78 z"
+   id="path48"
+   inkscape:connector-curvature="0" />
+  </g>
+  <g
+   id="bullet-char-template-8211"
+   transform="matrix(4.8828125e-4,0,0,-4.8828125e-4,0,0)">
+   <path
+   d="M -4,459 H 1135 V 606 H -4 Z"
+   id="path51"
+   inkscape:connector-curvature="0" />
+  </g>
+  <g
+   id="bullet-char-template-61548"
+   transform="matrix(4.8828125e-4,0,0,-4.8828125e-4,0,0)">
+   <path
+   d="m 173,740 c 0,163 58,303 173,419 116,115 255,173 419,173 163,0 302,-58 418,-173 116,-116 174,-256 174,-419 0,-163 -58,-303 -174,-418 C 1067,206 928,148 765,148 601,148 462,206 346,322 231,437 173,577 173,740 Z"
+   id="path54"
+   inkscape:connector-curvature="0" />
+  </g>
+ </defs>
+ <g
+   id="g62"
+   transform="translate(-3530.01,-3170.72)">
+  <g
+   id="id2"
+   class="Master_Slide">
+   <g
+   id="bg-id2"
+   class="Background" />
+   <g
+   id="bo-id2"
+   class="BackgroundObjects" />
+  </g>
+ </g>
+ <g
+   class="SlideGroup"
+   id="g97"
+   transform="translate(-3530.01,-3170.72)">
+  <g
+   id="g95">
+   <g
+   id="container-id1">
+    <g
+   id="id1"
+   class="Slide"
+   clip-path="url(#presentation_clip_path)">
+     <g
+   class="Page"
+   id="g91">
+      <g
+   class="Graphic"
+   id="g76">
+       <g
+   id="id3">
+        <rect
+   class="BoundingBox"
+   x="8531"
+   y="3921"
+   width="1995"
+   height="2870"
+   id="rect64"
+   style="fill:none;stroke:none" />
+        <defs
+   id="defs69">
+         <clipPath
+   id="clip_path_1"
+   clipPathUnits="userSpaceOnUse">
+          <path
+   d="m 8531,3921 h 1994 V 6790 H 8531 Z"
+   id="path66"
+   inkscape:connector-curvature="0" />
+         </clipPath>
+        </defs>
+        <g
+   clip-path="url(#clip_path_1)"
+   id="g73">
+         <path
+   d="m 9040,5372 156,235 c 20,17 41,28 64,34 33,8 69,4 98,-15 2,-1 3,-2 5,-2 28,-20 46,-51 53,-85 7,-34 1,-70 -19,-102 -1,-1 -2,-3 -3,-5 l -204,-292 c -24,-35 -59,-59 -96,-68 -33,-9 -68,-5 -98,14 -1,1 -3,2 -4,3 -29,19 -47,50 -54,84 -7,34 -1,71 19,102 1,2 2,3 3,5 l 9,13 c 25,20 49,47 71,79 z m 347,-1268 c -2,1 -5,1 -7,2 -36,9 -66,33 -84,65 -20,35 -28,79 -18,122 l 190,862 c 31,-24 66,-42 106,-52 53,-14 113,-13 180,2 -28,-126 -56,-253 -83,-380 -37,-171 -74,-343 -109,-493 -1,-3 -1,-6 -2,-9 -10,-41 -35,-75 -68,-97 -31,-21 -68,-29 -105,-22 z m 823,-182 c 4,0 8,0 12,1 75,9 140,49 185,107 43,57 67,130 61,208 0,4 -1,8 -2,12 l -95,964 v 0 c 0,1 0,3 -1,4 14,11 27,23 39,36 50,54 82,126 96,209 20,122 26,267 13,407 -11,130 -38,258 -83,363 -106,250 -296,422 -514,503 -102,38 -211,56 -319,53 -110,-2 -220,-25 -325,-70 -208,-89 -398,-262 -528,-527 -63,-130 -73,-211 -100,-347 -4,-22 3,-44 17,-59 l -86,-130 c -70,-106 -59,-216 -5,-298 21,-32 48,-59 79,-79 32,-21 67,-36 104,-42 16,-3 32,-4 48,-4 -3,-29 -2,-58 4,-86 13,-65 50,-126 107,-166 3,-2 6,-4 9,-6 62,-39 133,-48 200,-31 66,17 128,59 171,121 l 16,23 -169,-766 c -17,-79 -3,-157 33,-220 38,-65 99,-113 176,-131 1,-1 3,-1 5,-1 75,-16 149,2 210,42 61,41 108,106 126,184 v 0 c 1,1 1,3 1,4 38,164 74,330 110,496 11,53 23,107 34,159 l 66,-662 c 0,-3 1,-7 1,-11 10,-77 47,-145 101,-192 55,-48 127,-74 203,-68 z m 88,192 c -22,-30 -55,-50 -92,-55 -1,0 -2,0 -4,0 v -1 c -39,-4 -76,10 -105,35 -29,26 -49,62 -55,105 0,1 0,3 0,4 h -1 l -89,902 289,28 90,-896 c 0,-2 0,-3 0,-5 v 0 c 4,-44 -8,-86 -33,-117 z M 9283,5776 c 7,38 6,76 -2,112 -15,67 -55,128 -113,167 -1,0 -4,3 -9,6 v 0 c -1,1 -2,1 -3,1 -63,38 -135,44 -202,25 -43,-12 -84,-34 -118,-65 81,249 227,457 495,571 89,38 182,58 273,60 92,2 183,-13 269,-45 185,-69 345,-214 437,-429 39,-91 62,-204 73,-320 11,-129 6,-262 -13,-374 -10,-57 -30,-105 -61,-139 -28,-30 -65,-51 -112,-57 -102,-14 -287,-10 -553,-6 -29,1 -58,1 -89,2 -16,53 -18,98 -9,137 8,37 25,68 49,94 26,27 58,48 95,63 67,27 145,34 217,20 36,-10 73,11 84,46 11,36 -10,75 -46,86 -270,80 -271,114 -274,242 -1,9 -1,18 -1,23 -1,38 -33,67 -71,66 -37,-1 -67,-33 -66,-71 0,-10 1,-16 1,-22 4,-132 6,-202 103,-264 -43,-17 -82,-41 -116,-71 -19,38 -47,71 -83,97 -3,2 -6,4 -9,6 -46,29 -96,41 -146,39 z m -187,-83 c -14,-14 -28,-29 -39,-46 l -182,-260 c -31,-20 -64,-26 -94,-21 -20,4 -38,11 -55,22 -16,11 -31,26 -42,42 -27,41 -32,98 5,154 l 202,304 c 25,37 60,63 98,73 33,9 69,6 100,-12 0,0 1,0 1,-1 v 1 c 1,-1 2,-1 5,-3 30,-20 50,-52 57,-86 8,-35 3,-73 -17,-106 -2,-3 -3,-5 -3,-6 z"
+   id="path71"
+   inkscape:connector-curvature="0"
+   style="fill:#000000;stroke:none" />
+        </g>
+       </g>
+      </g>
+      <g
+   class="com.sun.star.drawing.TextShape"
+   id="g89">
+       <g
+   id="id4">
+        <rect
+   class="BoundingBox"
+   x="3540"
+   y="3170"
+   width="5208"
+   height="4435"
+   id="rect78"
+   style="fill:none;stroke:none" />
+        <text
+   class="TextShape"
+   id="text86"><tspan
+     class="TextParagraph"
+     font-size="3104px"
+     font-weight="500"
+     id="tspan84"
+     style="font-weight:500;font-size:3104px;font-family:Likhan"><tspan
+       class="TextPosition"
+       x="3790"
+       y="6538"
+       id="tspan82"><tspan
+         id="tspan80"
+         style="fill:#ffffff;stroke:none">Tili</tspan></tspan></tspan></text>
+
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

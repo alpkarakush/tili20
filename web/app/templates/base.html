@@ -1,25 +1,60 @@
 <!doctype html>
 <html>
     <head>
-        {% if title %}
-        <title>{{ title }} - Blog</title>
-        {% else %}
-        <title>Tili 2.0</title>
-        {% endif %}
-
-        <style>
-            body {background-color: #f6f6f6;}
-        </style>
-
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.100.css') }}">
 
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+
+            function vote(obj){
+                let data_id = obj.parentElement.getAttribute('data-id')
+                console.log("Vote  already in cookies: " + getCookie(data_id));
+                console.log(data_id);
+                if( !getCookie(data_id) ){ 
+                    if( obj.getAttribute('class').includes('word__rating--up') ){
+                        upvote(obj, data_id);
+                    } else if( obj.getAttribute('class').includes('word__rating--down') ) {
+                        downvote(obj, data_id);
+                    }
+                }
+            }
+
+            function upvote(obj, data_id){
+                obj.innerHTML = parseInt(obj.innerHTML) + 1;
+                savePoll(data_id);
+                send_vote(data_id, 1);
+            }
+            function downvote(obj, data_id){
+                obj.innerHTML = parseInt(obj.innerHTML) + 1;
+                savePoll(data_id);
+                send_vote(data_id, 0);
+            }
+
+            function send_vote(data_id, is_upvote){
+                fetch("{{ url_for('vote') }}", {
+                  method: "POST",
+                  body: JSON.stringify({
+                    'data_id': data_id,
+                    'is_upvote': is_upvote
+                  }),
+                  headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                  }
+                })
+                  .then((json) => console.log(json));
+            }
+
+            function savePoll(word_text){
+                var expires = (new Date(Date.now()+ 86400*1000)).toUTCString();
+                document.cookie = word_text+'=clicked;expires='+expires+';path=/;';
+            }
+            function getCookie(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+            }
+        </script>
     </head>
 
     <body>
@@ -36,11 +71,12 @@
         {% endwith %}
 
         <div class="container">
+          <div id="content__inner" class="content__inner" style="min-height: 1074px;">
             {% block content %}
             {% endblock %}
+          </div>
         </div>
-
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet"/>      
+        
     </body>
 
 </html>

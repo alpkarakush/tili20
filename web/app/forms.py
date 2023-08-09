@@ -1,21 +1,20 @@
-from xml.dom import ValidationErr
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, TextAreaField
+from wtforms import StringField, SubmitField, TextAreaField, BooleanField
 from wtforms.validators import DataRequired, Email, Length, ValidationError
 from app.models import User
 
 
 class NewWordForm(FlaskForm):
-    word_text = StringField('Word', validators=[DataRequired()])
-    definition_text = TextAreaField('Definition', validators=[
-        DataRequired(), Length(min=1, max=500)])
-    example_text = TextAreaField('Example')
+    word_text = StringField('Сөз', validators=[DataRequired(message="Cөздү жазыныз")])
+    definition_text = TextAreaField('Түшүндүрмө', validators=[DataRequired(message="Түшүндүрмө кошуу зарыл"), Length(min=1, max=500)])
+    example_text = TextAreaField('Мисал')
     
-    nickname = StringField('Nickname', validators=[DataRequired()])
-    email = StringField('Email', validators=[DataRequired(), Email()])
+    nickname = StringField('Лакап/Атынар')
+    email = StringField('Имейл', validators=[Email()])
+    receive_emails = BooleanField('receive_emails')
+    allow_cookies = BooleanField('allow_cookies')
+    submit = SubmitField('Жөнөт')
     
-    submit = SubmitField('Submit')
-
     def validate_nickname(self, nickname):
         nickname_user = User.query.filter_by(nickname=nickname.data).first()
         

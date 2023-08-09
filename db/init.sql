@@ -18,12 +18,5 @@ CREATE TABLE IF NOT EXISTS words (
     definition TEXT NOT NULL
 );
 
-INSERT INTO words (word, definition)
-VALUES 
-('word1', 'def1'),
-('word2', 'def2'),
-('word3', 'def3'),
-('word4', 'def4');
-
 -- create the databases
 CREATE DATABASE IF NOT EXISTS projectone;

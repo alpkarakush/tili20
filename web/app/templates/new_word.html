@@ -1,42 +1,65 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Create new word</h1>
-    <form action="" method="post" novalidate>
-        {{ form.hidden_tag() }}
-        <p>
-            {{ form.word_text.label }}<br>
-            {{ form.word_text(size=32) }}
-            {% for error in form.word_text.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>
-            {{ form.definition_text.label }}<br>
-            {{ form.definition_text(cols=32, rows=4, size=500) }}
-            {% for error in form.definition_text.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>
-            {{ form.example_text.label }}<br>
-            {{ form.example_text(cols=32, rows=2, size=300) }}
-        </p>
-        <p>
-            {{ form.nickname.label }}<br>
-            {{ form.nickname(size=300) }}
-            {% for error in form.nickname.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>
-            {{ form.email.label }}<br>
-            {{ form.email(size=300) }}
-            {% for error in form.email.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
+    <div class="content__list">
+            
+        <h1><span>Жаңы сөз</span></h1>
+        <p>Бул сайттагы сөздөрдун баары элдер менен кошулган. Сиз да жаны бир созду кошуп коюнуз.</p>
+        <form id="add_word__form" method="post" novalidate="novalidate">
+            {{ form.hidden_tag() }}
+            <div class="p">
+                <label for="add_word__title">Сөз</label>
+                {{ form.word_text(size=32, type='text',  autocomplete='off') }}
+                {% for error in form.word_text.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+            
+            <p>Тушунуктуу жана толо түрдө жазыныздар, б.а. баары түшүнө тургандай.</p>
+            
+            <div class="add_word__content add_word__content--1" data-id="1">
+                {{ form.definition_text.label }}
+                {{ form.definition_text(cols=32, rows=4, size=500) }}
+                {% for error in form.definition_text.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+                <br>
 
-        <p>{{ form.submit() }}</p>
-    </form>
+                {{ form.example_text.label }}
+                {{ form.example_text(cols=32, rows=2, size=300) }}
+                <br>
+            </div>
+            <p>
+                {{ form.nickname.label }}
+                {{ form.nickname(size=30) }}
+                {% for error in form.nickname.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+                <br>
+            </p>
+            <p>
+                {{ form.email.label }}
+                {{ form.email(cols=32, rows=2, size=30) }}
+                {% for error in form.email.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+                <br>
+            </p>
+            
+            <p>Сиздин лакапыныз/атыныз жазылган имейлге байланат. Бир имейлге бир гана лакапты байласа болот. Эгер жөн калтырсаныз, автордук "Аноним" деп чыгат.</p>
+
+            <label class="label__checkbox">
+                <input type="checkbox" value="1" name="add_word__news">
+                Имейлге жанылыктарды алганы макулдугум берем. (Спам жөнөтүлбөйт)
+            </label>
+            
+            <label class="label__checkbox">
+                <input type="checkbox" value="1" name="add_word__cookie">
+                Кукис сактаганы макулбугум берем. Лакап жана имейл өзү толуш үчүн.
+            </label>
+            
+            {{ form.submit() }}
+        </form>
+	
+    </div>
 {% endblock %}

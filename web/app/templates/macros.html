@@ -1,0 +1,61 @@
+
+
+{% macro word_list(endpoint, words) %}
+
+{% for word in words %}
+
+    <div class="word word--word_of_day">
+        <p class="word--date">{{ word['created_at']}}</p>
+        <h2 class="word__title">
+            <a href="">{{ word['word'] }}</a>
+        </h2>
+        <p>{{ word['definition'] }}</p>
+        {% if word['example'] != "": %}
+            <p><em>Мисал: „{{ word['example'] }}”&nbsp;</em></p>
+        {% endif %}
+        <div class="word__rating__wrap" data-id="{{ word['definition_id'] }}">
+            <div class="word__rating word__rating--up" onclick=vote(this)>{{ word['upvotes'] }}</div>
+            <div class="word__rating word__rating--down" onclick=vote(this)>{{ word['downvotes'] }}</div>
+        </div>
+        <p class="word__author">Автору <strong>{{ word['author'] }}</strong></p>
+    </div>
+{% endfor %}
+
+{% endmacro %}
+
+
+{% macro pagination(endpoint, prev_url, prev_num, next_url, next_num, pages) %}
+<div class="pagination">
+    <ul>
+        {% if prev_url %}
+            <li><a href="{{ prev_url }}">Мурунку</a></li>
+        {% endif %}
+
+        {% if next_url %}
+            <li><a href="{{ next_url }}">Эмики</a></li>
+        {% endif %}
+    </ul>
+</div>
+{% endmacro %}
+
+{% macro nav_links(endpoint) %}
+<div id="menu__wrap" class="menu__wrap">
+    <div class="container">
+      <div class="menu__inner">
+        <nav id="header__menu__inner" class="header__menu__inner">
+          <ul id="menu-hlavni-menu-leve" class="menu">
+            <li class="menu-item menu-item-type-custom menu-item-object-custom {{ 'current-menu-item' if(endpoint == 'index') }} "><a href="/">Күндүн сөзү</a></li>
+            <li class="menu-item-has-children menu__letters menu-item menu-item-type-custom menu-item-object-custom {{ 'current-menu-item' if endpoint == 'alphabetical' }}"><a>Алфавит тартибинде</a></li>
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-zebricek {{ 'current-menu-item' if endpoint == 'favorites' }}"><a href="{{url_for('favorites')}}">Эң жаккандар</a></li>
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-zebricek {{ 'current-menu-item' if endpoint == 'newly_added' }}"><a href="{{url_for('newly_added')}}">Жаңы кошулган</a></li>
+          </ul>
+        </nav>			
+        <nav id="header__menu__inner__right" class="header__menu__inner__right">
+          <ul id="menu-hlavni-menu-prave" class="menu">
+            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="mailto:bekbolot.kudayberdiev@gmail.com">Байланышуу</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+{% endmacro %}
