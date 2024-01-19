@@ -7,7 +7,7 @@
 
 ## DB:
 - words (word_id, word_text, created_at, author(user_id))
-- definitions(word(word_id), description_text, created_at)
+- definitions(word(word_id), description_text, created_at, upvotes, downvotes)
 - users(user_id, nickname)
 
 Steps to initiate:
