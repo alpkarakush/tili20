@@ -43,10 +43,19 @@ Steps to initiate:
 ```
 2. Read this [source](https://code.visualstudio.com/docs/python/tutorial-flask#:~:text=Select%20the%20link%20and%20VS,object%20within%20the%20configuration%20array.) for further steps. 
 
+## How to deploy
+1. Pull the code to server
+2. Install requiements.txt
+3. Assign environment variables
+   1. SECRET_KEY
 
 ## Todo:
 There are many imporvements to make to this website. Feel free to send PRs and be a part of Neo-Kyrgyz movement.
 
+
+* [ ] Add admin panel for managing words
+* [ ] Limit per user words at 5 a day
+* [ ] Add caching for index page
 * [ ] Prepare prod and debug configs and corresponding environments
 * [ ] Write tests
 * [ ] Prepare CI & CD

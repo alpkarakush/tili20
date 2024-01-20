@@ -4,6 +4,18 @@ from app.forms import NewWordForm
 from app.models import User, Word, Definition
 from sqlalchemy import cast, Date, func
 
+@app.before_request
+def limit_remote_addr():
+    if request.script_root == '/admin' and request.remote_addr != os.environ.get('ADMIN_REMOTE_IP'):
+        abort(403)
+
+
+@app.route("/admin", methods=['post'])
+def admin():
+    return "hello"
+
+
+
 @app.route("/vote", methods=['post'])
 def vote():
     data = request.get_json()
