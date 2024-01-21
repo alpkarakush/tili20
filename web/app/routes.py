@@ -10,9 +10,57 @@ def limit_remote_addr():
         abort(403)
 
 
-@app.route("/admin", methods=['post'])
+@app.route("/delete", methods=['POST'])
+def delete():
+    data = request.get_json()
+    data_id = data['data_id']
+    
+    definition = Definition.query.get(data_id)
+    
+    db.session.delete(definition)
+    db.session.commit()
+    
+    app.logger.info('Word is deleted data_id: %s', data_id)
+    return f"Deleted {data_id}"
+
+@app.route("/admin", methods=['GET', 'POST'])
 def admin():
-    return "hello"
+    page = request.args.get('page', 1, type=int)
+    
+    query_result = db.session.query(Word, Definition, User
+        ).join(
+            Definition, Definition.word_id == Word.id
+        ).join(
+            User, User.id == Word.author_id
+        ).order_by(
+            Word.created_at.desc()
+        ).paginate(
+            page=page, 
+            per_page=app.config['WORDS_PER_PAGE'], 
+            error_out=False)
+    
+    words = [ {'word': word[0].word_text,
+            'definition': word[1].definition_text,
+            'definition_id': word[1].id,
+            'example': word[1].example_text,
+            'created_at' : word[1].created_at.strftime("%d/%m/%Y"),
+            'upvotes': word[1].upvotes,
+            'downvotes': word[1].downvotes,
+            'author': word[2].nickname}  for word in query_result.items]
+    
+    # Pagination
+    next_url = None
+    prev_url = None
+    
+    if query_result.has_next:
+        next_url = url_for('index', page=query_result.next_num)
+    if query_result.has_prev:
+        prev_url = url_for('index', page=query_result.prev_num)
+
+    return render_template("admin.html", 
+                           words=words, 
+                           next_url=next_url,
+                           prev_url=prev_url)
 
 
 

@@ -20,6 +20,22 @@
                 }
             }
 
+            function deleteWord(obj){
+                let data_id = obj.getAttribute('data-id')
+                console.log("Deleting " + data_id);
+
+                fetch("{{ url_for('delete') }}", {
+                    method: "POST",
+                    body: JSON.stringify({
+                      'data_id': data_id
+                    }),
+                    headers: {
+                      "Content-type": "application/json; charset=UTF-8"
+                    }
+                  })
+                    .then((json) => console.log(json));
+            }
+
             function upvote(obj, data_id){
                 obj.innerHTML = parseInt(obj.innerHTML) + 1;
                 savePoll(data_id);

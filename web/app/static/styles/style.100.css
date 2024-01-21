@@ -4271,6 +4271,20 @@ body{
 .word__rating__wrap:after{
     clear:both
 }
+.word__delete {
+    border: 1px solid #b7b7b7;
+    border-radius: 3px 0 0 3px;
+    /* background: #ed5858; */
+    background: #890000 url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IS0tIFVwbG9hZGVkIHRvOiBTVkcgUmVwbywgd3d3LnN2Z3JlcG8uY29tLCBHZW5lcmF0b3I6IFNWRyBSZXBvIE1peGVyIFRvb2xzIC0tPg0KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik02IDdWMThDNiAxOS4xMDQ2IDYuODk1NDMgMjAgOCAyMEgxNkMxNy4xMDQ2IDIwIDE4IDE5LjEwNDYgMTggMThWN002IDdINU02IDdIOE0xOCA3SDE5TTE4IDdIMTZNMTAgMTFWMTZNMTQgMTFWMTZNOCA3VjVDOCAzLjg5NTQzIDguODk1NDMgMyAxMCAzSDE0QzE1LjEwNDYgMyAxNiAzLjg5NTQzIDE2IDVWN004IDdIMTYiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4NCjwvc3ZnPg==) center center no-repeat;
+    background-size: 30px;
+    font-weight: 600;
+    line-height: 38px;
+    padding: 0 10px 0 55px;
+}
+.word__delete.active, .word__delete:hover {
+    background-color: #ff3434; 
+}
+
 .word__rating{
     font-size:14px;
     font-size:.875rem;

@@ -1,9 +1,8 @@
 
 
-{% macro word_list(endpoint, words) %}
+{% macro word_list(endpoint, words, delete_button='false') %}
 
 {% for word in words %}
-
     <div class="word word--word_of_day">
         <p class="word--date">{{ word['created_at']}}</p>
         <h2 class="word__title">
@@ -18,6 +17,10 @@
             <div class="word__rating word__rating--down" onclick=vote(this)>{{ word['downvotes'] }}</div>
         </div>
         <p class="word__author">Автору <strong>{{ word['author'] }}</strong></p>
+
+        {% if delete_button == 'true' %}
+          <div class="word__delete" data-id="{{ word['definition_id'] }}" onclick=deleteWord(this)>Өчүр</div>
+        {% endif %}
     </div>
 {% endfor %}
 

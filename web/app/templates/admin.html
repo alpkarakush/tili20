@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% from "macros.html" import word_list, pagination with context %}
+
+{% block content %}
+    
+    {{ word_list('newly_added', words, 'true') }}
+    {{ pagination('newly_added', prev_url, next_url) }}
+
+{% endblock %}
+
