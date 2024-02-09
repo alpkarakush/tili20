@@ -6,7 +6,7 @@
     <div class="word word--word_of_day">
         <p class="word--date">{{ word['created_at']}}</p>
         <h2 class="word__title">
-            <a href="">{{ word['word'] }}</a>
+            <a href="/word/{{ word['word'] }}">{{ word['word'] }}</a>
         </h2>
         <p>{{ word['definition'] }}</p>
         {% if word['example'] != "": %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% from "macros.html" import word_list, pagination with context %}
+
+{% block content %}
+    
+    {{ word_list('index', words) }}
+
+    {% for d in def_list %}
+    <div class="word">
+        <p class="word--date">{{ d['created_at']}}</p>
+        <h2 class="word__title">
+            <a href="/word/{{ d['word'] }}">{{ d['word'] }}</a>
+        </h2>
+        <p>{{ d['definition'] }}</p>
+        {% if d['example'] != "": %}
+            <p><em>Мисал: „{{ d['example'] }}”&nbsp;</em></p>
+        {% endif %}
+        <div class="word__rating__wrap" data-id="{{ d['definition_id'] }}">
+            <div class="word__rating word__rating--up" onclick=vote(this)>{{ d['upvotes'] }}</div>
+            <div class="word__rating word__rating--down" onclick=vote(this)>{{ d['downvotes'] }}</div>
+        </div>
+        <p class="word__author">Автору <strong>{{ d['nickname'] }}</strong></p>
+
+        {% if delete_button == 'true' %}
+          <div class="word__delete" data-id="{{ d['definition_id'] }}" onclick=deleteWord(this)>Өчүр</div>
+        {% endif %}
+    </div>
+{% endfor %}
+
+{% endblock %}

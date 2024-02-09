@@ -1,8 +1,14 @@
 from app import db
 from datetime import datetime
+from flask_login import UserMixin
+from app import login
+from werkzeug.security import check_password_hash, generate_password_hash
+import sqlalchemy.orm as so
+import sqlalchemy as sa
+from typing import Optional
 
 
-class User(db.Model):
+class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nickname = db.Column(db.String(80), index=True, unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
@@ -10,6 +16,7 @@ class User(db.Model):
     verified = db.Column(db.Boolean, index=True, default=False)
     consent_to_send_emails = db.Column(db.Boolean, index=True, default=False)
     consent_to_cookies = db.Column(db.Boolean, index=True, default=False)
+    password_hash = db.Column(db.String(256))
     
     words = db.relationship('Word', backref='author', lazy='dynamic')
     
@@ -22,6 +29,16 @@ class User(db.Model):
     
     def __repr__(self):
         return '<User %r>' % self.nickname
+    
+    def set_password(self, password):
+        self.password_hash = generate_password_hash(password)
+
+    def check_password(self, password):
+        return check_password_hash(self.password_hash, password)
+
+@login.user_loader
+def load_user(id):
+    return db.session.get(User, int(id))
 
 class Word(db.Model):
     id = db.Column(db.Integer, primary_key=True)

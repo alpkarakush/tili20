@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="content__list">
+            
+        <h1><span>Жаңы колдонуучу</span></h1>
+        <form id="user_registration__form" method="post" novalidate="novalidate">
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.nickname.label }}
+                {{ form.nickname(size=30) }}
+                {% for error in form.nickname.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+                <br>
+            </p>
+            <p>
+                {{ form.email.label }}
+                {{ form.email(cols=32, rows=2, size=30) }}
+                {% for error in form.email.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+                <br>
+            </p>
+
+            <p>
+                {{ form.password.label }}
+                {{ form.password(cols=32, rows=2, size=30) }}
+                {% for error in form.password.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+                <br>
+            </p>
+
+            <p>
+                {{ form.password2.label }}
+                {{ form.password2(cols=32, rows=2, size=30) }}
+                {% for error in form.password2.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+                <br>
+            </p>
+            
+
+            <p>Сиздин лакапыныз/атыныз жазылган имейлге байланат. Бир имейлге бир гана лакапты байласа болот. Эгер жөн калтырсаныз, автордук "Аноним" деп чыгат.</p>
+
+            <label class="label__checkbox">
+                <input type="checkbox" value="1" name="add_word__news">
+                Имейлге жанылыктарды алганы макулдугум берем. (Спам жөнөтүлбөйт)
+            </label>
+            
+            <label class="label__checkbox">
+                <input type="checkbox" value="1" name="add_word__cookie">
+                Кукис сактаганы макулбугум берем. Лакап жана имейл өзү толуш үчүн.
+            </label>
+            
+            {{ form.submit() }}
+        </form>
+	
+    </div>
+{% endblock %}

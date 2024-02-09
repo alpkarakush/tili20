@@ -9,3 +9,6 @@ flask_migrate
 flask_moment
 email_validator
 flask-cors
+Flask-Admin
+flask_login
+slugify

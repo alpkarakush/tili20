@@ -53,14 +53,20 @@ Steps to initiate:
 There are many imporvements to make to this website. Feel free to send PRs and be a part of Neo-Kyrgyz movement.
 
 
-* [ ] Add admin panel for managing words
-* [ ] Limit per user words at 5 a day
-* [ ] Add caching for index page
+* [x] Add admin panel for managing words
+* [ ] OAuth Google, Telegram
+* [ ] Add kygryz letters in word submission form
+* [ ] Parse the submitted definition to map to other words if they exist in db
+* [ ] Add sitemap for SEO
+* [ ] Add google analytics 
+* [ ] Limit per user words at 5 a day (falsk-limiter)
+* [ ] Add caching
 * [ ] Prepare prod and debug configs and corresponding environments
 * [ ] Write tests
 * [ ] Prepare CI & CD
 * [ ] Make a full-text search
 * [ ] Make a word page to show all definitions of given word
+* [ ] Integrate Google Translate from KG to RU/ENG
 * [ ] Make prettier logo
 * [ ] Customize website design
 * [ ] Add aching for pages
