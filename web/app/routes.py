@@ -100,7 +100,7 @@ def word(word=None):
     return render_template('word.html', def_list=def_list)
 
 
-@app.route("/new_word", methods=['post', 'get'])
+@app.route("/add-new-word", methods=['post', 'get'])
 def new_word():
     form = NewWordForm()
     
@@ -231,7 +231,7 @@ def favorites():
                            next_url=next_url,
                            prev_url=prev_url)
 
-@app.route("/newly_added", methods=['get'])
+@app.route("/newly-added", methods=['get'])
 def newly_added():
     page = request.args.get('page', 1, type=int)
     
