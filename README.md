@@ -56,6 +56,7 @@ There are many imporvements to make to this website. Feel free to send PRs and b
 * [x] Add admin panel for managing words
 * [ ] OAuth Google, Telegram
 * [x] Add kygryz letters in word submission form
+* [x] Refactor into blueprints
 * [ ] Parse the submitted definition to map to other words if they exist in db
 * [ ] Add sitemap for SEO
 * [ ] Add google analytics 
@@ -65,7 +66,7 @@ There are many imporvements to make to this website. Feel free to send PRs and b
 * [ ] Write tests
 * [ ] Prepare CI & CD
 * [ ] Make a full-text search
-* [ ] Make a word page to show all definitions of given word
+* [x] Make a word page to show all definitions of given word
 * [x] Integrate Google Translate from KG to RU/ENG
 * [ ] Make prettier logo
 * [ ] Customize website design
