@@ -6,3 +6,4 @@ MYSQL_DB="tili"
 DB_HOST="db"
 DB_PORT="3306"
 FLASK_DEBUG=1
+SECRET_KEY=a-really-long-and-unique-key-that-nobody-knows

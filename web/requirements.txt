@@ -12,3 +12,5 @@ flask-cors
 Flask-Admin
 flask_login
 slugify
+Flask-Caching
+python-dotenv

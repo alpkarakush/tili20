@@ -6,7 +6,7 @@ COPY . /app
 RUN python -m pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
 # Ensure the path here is correct
-ENV FLASK_APP /app/app.py
+ENV FLASK_APP tili.py
 ENV TEMPLATES_AUTO_RELOAD True
 
 RUN apt-get update && apt-get install -y iputils-ping

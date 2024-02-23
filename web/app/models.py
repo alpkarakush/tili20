@@ -1,11 +1,11 @@
-from app import db
 from datetime import datetime
 from flask_login import UserMixin
-from app import login
+# from app.auth import login
 from werkzeug.security import check_password_hash, generate_password_hash
 import sqlalchemy.orm as so
 import sqlalchemy as sa
 from typing import Optional
+from app import db, login
 
 
 class User(UserMixin, db.Model):

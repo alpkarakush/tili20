@@ -49,8 +49,8 @@
           <ul id="menu-hlavni-menu-leve" class="menu">
             <li class="menu-item menu-item-type-custom menu-item-object-custom {{ 'current-menu-item' if(endpoint == 'index') }} "><a href="/">Күндүн сөзү</a></li>
             <li class="menu-item-has-children menu__letters menu-item menu-item-type-custom menu-item-object-custom {{ 'current-menu-item' if endpoint == 'alphabetical' }}"><a>Алфавит тартибинде</a></li>
-            <li class="menu-item menu-item-type-taxonomy menu-item-object-zebricek {{ 'current-menu-item' if endpoint == 'favorites' }}"><a href="{{url_for('favorites')}}">Эң жаккандар</a></li>
-            <li class="menu-item menu-item-type-taxonomy menu-item-object-zebricek {{ 'current-menu-item' if endpoint == 'newly_added' }}"><a href="{{url_for('newly_added')}}">Жаңы кошулган</a></li>
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-zebricek {{ 'current-menu-item' if endpoint == 'favorites' }}"><a href="{{url_for('main.favorites')}}">Эң жаккандар</a></li>
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-zebricek {{ 'current-menu-item' if endpoint == 'newly_added' }}"><a href="{{url_for('main.newly_added')}}">Жаңы кошулган</a></li>
           </ul>
         </nav>			
         <nav id="header__menu__inner__right" class="header__menu__inner__right">
@@ -60,5 +60,14 @@
         </nav>
       </div>
     </div>
+  </div>
+{% endmacro %}
+
+{% macro kg_letters() %}
+  <div id="kg_letters_block" style="display: block;">
+      <span class="kg_letter" onclick=addLetterToInput(this)>ң</span>
+      <span class="kg_letter" onclick=addLetterToInput(this)>ө</span>
+      <span class="kg_letter" onclick=addLetterToInput(this)>ү</span>
+      <div style="clear:both"></div>
   </div>
 {% endmacro %}

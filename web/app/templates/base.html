@@ -25,7 +25,7 @@
                 let data_id = obj.getAttribute('data-id')
                 console.log("Deleting " + data_id);
 
-                fetch("{{ url_for('delete') }}", {
+                fetch("{{ url_for('main.delete') }}", {
                     method: "POST",
                     body: JSON.stringify({
                       'data_id': data_id
@@ -49,7 +49,7 @@
             }
 
             function send_vote(data_id, is_upvote){
-                fetch("{{ url_for('vote') }}", {
+                fetch("{{ url_for('main.vote') }}", {
                   method: "POST",
                   body: JSON.stringify({
                     'data_id': data_id,
@@ -70,6 +70,13 @@
                 const value = `; ${document.cookie}`;
                 const parts = value.split(`; ${name}=`);
                 if (parts.length === 2) return parts.pop().split(';').shift();
+            }
+
+            function addLetterToInput(e) {
+              var text = e.parentNode.previousElementSibling.value += e.innerHTML;
+              console.log(e.parentNode);
+              console.log(e.parentNode.previousElementSibling);
+              console.log(e.innerHTML);  
             }
         </script>
     </head>

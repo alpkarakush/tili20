@@ -3,7 +3,7 @@
 <header class="header">
   <div class="container">
       <a class="header__go_to_content" href="#content" title="Přejít na obsah">Přejít na obsah</a>
-      <a class="header__logo" href="{{ url_for('index') }}">
+      <a class="header__logo" href="{{ url_for('main.index') }}">
      <img src="{{ url_for('static', filename='/tili_logo_white_2-cropped.svg') }}" width=110 alt="Logo"></a>
       <div class="header__claim">Сиз жазган сөздүк</div>
       <form role="search" method="get" class="header__search header__search--desktop"
@@ -29,10 +29,10 @@
         </div>
     </form>
     <span id="header__menu__button" class="header__menu__button"><span>Menu</span></span>
-    <a href="{{ url_for('new_word')}}" class="header__add button button--add">Жаңы сөз кош<span>&nbsp;</span></a>
+    <a href="{{ url_for('main.new_word')}}" class="header__add button button--add">Жаңы сөз кош<span>&nbsp;</span></a>
   </div>
 </header>
 
-{{ nav_links(request.endpoint.strip()) }}
+{{ nav_links(request.endpoint.strip() if request.endpoint else "") }}
 
 

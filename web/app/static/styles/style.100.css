@@ -4788,3 +4788,14 @@ body{
     text-decoration: none;
     cursor: pointer;
 }
+
+#kg_letters_block span {
+    border: 1px solid #CCCCCC;
+    cursor: pointer;
+    display: block;
+    float: left;
+    margin: 2px;
+    padding: 4px;
+    font-size: 18px;
+    font-weight: bold;
+}

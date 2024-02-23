@@ -55,7 +55,7 @@ There are many imporvements to make to this website. Feel free to send PRs and b
 
 * [x] Add admin panel for managing words
 * [ ] OAuth Google, Telegram
-* [ ] Add kygryz letters in word submission form
+* [x] Add kygryz letters in word submission form
 * [ ] Parse the submitted definition to map to other words if they exist in db
 * [ ] Add sitemap for SEO
 * [ ] Add google analytics 
@@ -66,10 +66,10 @@ There are many imporvements to make to this website. Feel free to send PRs and b
 * [ ] Prepare CI & CD
 * [ ] Make a full-text search
 * [ ] Make a word page to show all definitions of given word
-* [ ] Integrate Google Translate from KG to RU/ENG
+* [x] Integrate Google Translate from KG to RU/ENG
 * [ ] Make prettier logo
 * [ ] Customize website design
-* [ ] Add aching for pages
+* [ ] Add caching for pages
   * [ ] Don't forget to force update upon adding new word
 * [ ] Make a created_at date more like whatsapp messages (added 8 minutes ago, ...) 
 * [ ] Add authors pages and make authors nickname clickable in word section
