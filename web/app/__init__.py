@@ -27,7 +27,7 @@ def create_app(config_class=Config):
     migrate.init_app(app, db)
     login.init_app(app)
     moment.init_app(app)
-    admin = Admin(app, name='microblog', template_mode='bootstrap3')
+    admin = Admin(app, name='Tili Admin', template_mode='bootstrap3')
     
     # Blueprints
     from app.auth import bp as auth_bp

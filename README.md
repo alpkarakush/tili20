@@ -1,5 +1,6 @@
 # Tili 2.0 - Urban dictionary of kyrgyz
 
+
 ## Instructions:
 - git clone https://github.com/alpkarakush/tili20.git
 - export FLASK_APP=path_to_folder/tili20/web
@@ -62,6 +63,7 @@ There are many imporvements to make to this website. Feel free to send PRs and b
 * [ ] Add google analytics 
 * [ ] Limit per user words at 5 a day (falsk-limiter)
 * [ ] Add caching
+* [ ] Use this tool to fix errors https://github.com/kyrgyz-nlp/letter_replacer
 * [ ] Prepare prod and debug configs and corresponding environments
 * [ ] Write tests
 * [ ] Prepare CI & CD
@@ -82,6 +84,13 @@ There are many imporvements to make to this website. Feel free to send PRs and b
   * [ ] Try to make a scraper that pulls instagram/tik-tok comments, which often contain informal language
 * [ ] Make a page to fill in words for volunteers
 * [ ] Make a bot that posts Word of the day on social media with pretty image formating
+  
+## How it looks:
+
+
+![Index Page](readme_static/index.png "Index Page")
+![Add word page](readme_static/add_word_page.png "Add word page")
+![Admin panel](readme_static/admin_panel.png "Admin panel")
 
 
 

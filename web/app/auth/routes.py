@@ -23,7 +23,7 @@ def register():
             db.session.commit()
         
             flash(f'Жаны автор {form.nickname.data} кошулду!')
-            return redirect(url_for('index'))
+            return redirect(url_for('main.index'))
         else:
             flash('Бул имейл менен автор катталган!', 'error')
 
@@ -32,23 +32,23 @@ def register():
 @bp.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
-        return redirect(url_for('index'))
+        return redirect(url_for('main.index'))
 
     form = LoginForm()
 
     if form.validate_on_submit():
         existing_user = User.query.filter_by(email=form.email.data).first()
 
-        if not existing_user or not user.check_password(form.password.data):
+        if not existing_user or not existing_user.check_password(form.password.data):
             flash('Invalid email or password', 'error')
-            return redirect(url_for('login'))
+            return redirect(url_for('auth.login'))
 
         login_user(existing_user, remember=form.remember_me.data)
-        return redirect(url_for('index'))
+        return redirect(url_for('main.index'))
 
     return render_template('login.html', title='Sign In', form=form)
 
 @bp.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('index'))
+    return redirect(url_for('main.index'))

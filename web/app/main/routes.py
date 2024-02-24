@@ -105,7 +105,7 @@ def new_word():
         definition = Definition.query.filter(Definition.definition_text.ilike(form.definition_text.data)).first()
         if definition is not None:
             flash('Сөз түшүндүрмөсү базада бар экен!')
-            redirect(url_for('index'))
+            redirect(url_for('main.index'))
         
         new_definition = Definition(user.id, 
                                     word.id, 
@@ -116,59 +116,35 @@ def new_word():
         
         flash(f'Жаны соз {form.word_text.data} кошулду!')
         
-        return redirect(url_for('index'))
+        return redirect(url_for('main.index'))
     
     return render_template('new_word.html', title='Create a new word', form=form)
 
 @bp.route("/index", methods=['get'])
 @bp.route("/", methods=['get'])
 def index():
-    WordResult = namedtuple('WordResult', 
-                            ['word', 
-                            'definition_id', 
-                            'definition', 
-                            'created_at', 
-                            'example', 
-                            'upvotes', 
-                            'downvotes', 
-                            'author'])
-
     page = request.args.get('page', 1, type=int)
-
+    
     query_result = (
-        db.session.query(
-            Word.id,
-            Word.word_text,
-            Definition.id,
-            Definition.definition_text,
-            func.max(Definition.created_at),
-            Definition.example_text,
-            Definition.upvotes,
-            Definition.downvotes,
-            User.nickname
-        )
+        db.session.query(Word, Definition, User)
         .join(Definition, Definition.word_id == Word.id)
-        .join(User, User.id == Definition.author_id)
-        .group_by(func.date(Definition.created_at.cast(Date)))
-        .paginate(
-            page=page,
-            per_page=current_app.config['WORDS_PER_PAGE'],
-            error_out=False
-        )
+        .join(User, User.id == Word.author_id)
+        .order_by(Word.created_at.desc())
+        .paginate(page=page, per_page=current_app.config['WORDS_PER_PAGE'], error_out=False)
     )
 
     words = [
-        WordResult(
-            word=word_text,
-            definition_id=definition_id,
-            definition=definition_text,
-            created_at=max_created_at.strftime("%d/%m/%Y"),
-            example=example_text,
-            upvotes=upvotes,
-            downvotes=downvotes,
-            author=nickname
-        )
-        for word_id, word_text, definition_id, definition_text, max_created_at, example_text, upvotes, downvotes, nickname in query_result.items
+        {
+            'word': word.word_text,
+            'definition': definition.definition_text,
+            'definition_id': definition.id,
+            'example': definition.example_text,
+            'created_at': definition.created_at.strftime("%d/%m/%Y"),
+            'upvotes': definition.upvotes,
+            'downvotes': definition.downvotes,
+            'author': user.nickname
+        }
+        for word, definition, user in query_result.items
     ]
 
     # Extract next and previous page URLs
@@ -197,6 +173,7 @@ def favorites():
         {
             'word': word.word_text,
             'definition': definition.definition_text,
+            'definition_id': definition.id,
             'example': definition.example_text,
             'created_at': definition.created_at.strftime("%d/%m/%Y"),
             'upvotes': definition.upvotes,
@@ -227,6 +204,7 @@ def newly_added():
         {
             'word': word.word_text,
             'definition': definition.definition_text,
+            'definition_id': definition.id,
             'example': definition.example_text,
             'created_at': definition.created_at.strftime("%d/%m/%Y"),
             'upvotes': definition.upvotes,
