@@ -1,10 +1,11 @@
 # Tili 2.0 - Urban dictionary of kyrgyz
 
-## Instructions
+## Instructions to run locally
 
 - git clone https://github.com/alpkarakush/tili20.git
-- export FLASK_APP=path_to_folder/tili20/web
-- flask run
+- docker-compose up
+
+Simple as that.
 
 ## DB
 
